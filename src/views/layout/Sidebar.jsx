@@ -1130,27 +1130,26 @@ const Sidebar = () => {
                         {/* Link added by dushyant */}
 
 
-                     <li>
+                        <li>
                           <Link
                             className={
-                              pathname.includes("employees")
+                              pathname.includes("employee-complete-attendence")
                                 ? "active"
-                                : pathname.includes("employees-list")
-                                  ? "active"
-                                  : ""
+                                : ""
                             }
-                            to="/employees-list"
+                            to="/employee-complete-attendence"
+                            
                             onClick={() =>
                               toggleSidebar(
                                 isSideMenu == "employee" ? "" : "employee"
                               )
                             }
                           >
-                            {t("Employee Details")}
+                            {t("View Employee Attendance")}
                           </Link>
                         </li>
 
-                        {/* Link is being added by me */}
+                        {/* Link added by dushyant */}
 
 
                       </ul>

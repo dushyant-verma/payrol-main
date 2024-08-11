@@ -195,6 +195,8 @@ import NationalHoliday from "../../views/pages/Employees/NationalHoliday.jsx";
 import SalaryStructure from "../../views/pages/Employees/SalaryStructure.jsx";
 import DailyBasisAttendence from "../../views/pages/Employees/DailBasisAttendence.jsx";
 import MonthlyBasisAttendence from "../../views/pages/Employees/MonthlyBasisAttendence.jsx";
+import EmployeeCompleteAttendence from "../../views/pages/Employees/EmployeeCompleteAttendence.jsx";
+
 
 const AppContainer = () => {
   useEffect(() => {
@@ -936,6 +938,13 @@ const AppContainer = () => {
       path: "monthly-attend-employee",
       element: <MonthlyBasisAttendence />,
     },
+    {
+      id: 139,
+      path: "employee-complete-attendence",
+      element: <EmployeeCompleteAttendence />,
+    },
+
+
   ];
   const ChatRoutingeObjects = [
     {
