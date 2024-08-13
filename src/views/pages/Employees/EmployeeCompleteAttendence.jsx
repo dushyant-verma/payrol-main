@@ -20,6 +20,8 @@ const EmployeeCompleteAttendence = () => {
   const [attendenceData, setAttenedenceData] = useState([]);
   const [todayactivity, setTodayActivity] = useState([]);
 
+  console.log(data)
+
   const userElements = data?.map((user, index) => ({
     key: index,
     id: user.id,
@@ -30,6 +32,12 @@ const EmployeeCompleteAttendence = () => {
     Break: user.Break,
     Overtime: user.Overtime,
   }));
+
+
+// This is the table in which punch in and punch out is being stored 
+
+
+
 
   const columns = [
     {
@@ -53,6 +61,15 @@ const EmployeeCompleteAttendence = () => {
       sorter: (a, b) => a.punchOut.length - b.punchOut.length,
     },
   ];
+
+
+
+// This is the table in which punch in and punch out is being stored 
+
+
+
+
+
   // useEffect(() => {
   //   axios
   //     .get(base_url + "/api/attendenceemployeedatatable.json")
@@ -161,7 +178,7 @@ const EmployeeCompleteAttendence = () => {
         });
 
         setPunchIndata(punchInData1);
-
+        console.log(punchIndata)
         let punchOutData1 = newData?.filter((item) =>
           JSON.stringify(item).includes("punchOut")
         );
@@ -281,7 +298,7 @@ const EmployeeCompleteAttendence = () => {
                       type="button"
                       className="btn btn-primary punch-btn"
                       onClick={() => handleMarkAttendence("punchOut1")}
-                      disabled={punchIn===true ? false:true}
+                      disabled={punchIn === true ? false:true}
                     >
                       Punch Out
                     </button>
